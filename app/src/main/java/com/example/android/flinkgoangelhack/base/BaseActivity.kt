@@ -1,13 +1,11 @@
-package com.example.android.flinkgoangelhack
+package com.example.android.flinkgoangelhack.base
 
 import android.app.Dialog
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.flinkgoandroid.di.components.ActivityComponent
 import com.example.android.flinkgoandroid.di.modules.ActivityModules
+import com.example.android.flinkgoangelhack.App
 
 abstract class BaseActivity : AppCompatActivity() {
     private lateinit var mActivityComponent: ActivityComponent
@@ -20,8 +18,11 @@ abstract class BaseActivity : AppCompatActivity() {
         initData()
         initView()
     }
+
     abstract fun getViewId():Int
+
     abstract fun initData()
+
     private fun initInjector(){
         mActivityComponent = (application as App).getApplicationComponent()!!.getActivityComponent(ActivityModules(this))
     }

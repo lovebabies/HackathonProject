@@ -1,6 +1,8 @@
 package com.example.android.flinkgoangelhack.view
 
-interface LoginView{
+import com.example.android.flinkgoangelhack.base.BaseView
+
+interface LoginView: BaseView {
     fun onLoginSuccess()
     fun onLoginFailed()
 }
