@@ -7,4 +7,6 @@
     <color name="colorText">#181818</color>
     <color name="colorCrimson">#DC143C</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorBase">#cf2a27</color>
+    <color name="colorDimGray">#696969</color>
 </resources>

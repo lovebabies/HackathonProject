@@ -18,32 +18,32 @@ class MessageViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
     var mContent = itemView.findViewById<TextView>(R.id.content)
     var mAvatar = itemView.findViewById<CircleImageView>(R.id.avatar)
-    fun bind(message: Message, context: Context, position: Int, lastPos: Int, previousType: Int, mPref: PreferencesUtil) {
+    fun bind(message: Message, mPref: PreferencesUtil) {
         if (message.userType == USER) {
-            Glide.with(context).load(mPref.avatarUrl).into(mAvatar)
+            Glide.with(itemView.context).load(mPref.avatarUrl).into(mAvatar)
         }
         if (message.displayAvatar) {
             mAvatar.visibility = View.VISIBLE
         } else {
             mAvatar.visibility = View.GONE
         }
-        if (position == lastPos) {
-            message.displayAvatar = previousType != message.userType
-            if (message.userType == BOT) {
-                val typingView = itemView.findViewById<ImageView>(R.id.typing)
-                typingView.visibility = View.VISIBLE
-                Glide.with(context).asGif().load(R.raw.type).into(typingView)
-                mContent.visibility = View.GONE
-                Handler().postDelayed({
-                    typingView.visibility = View.GONE
-                    mContent.visibility = View.VISIBLE
-                    mContent.text = message.content
-                }, 2000)
-            } else {
-                mContent.text = message.content
-            }
-        } else {
-            mContent.text = message.content
-        }
+//        if (position == lastPos) {
+//            message.displayAvatar = previousType != message.userType
+//            if (message.userType == BOT) {
+//                val typingView = itemView.findViewById<ImageView>(R.id.typing)
+//                typingView.visibility = View.VISIBLE
+//                Glide.with(context).asGif().load(R.raw.type).into(typingView)
+//                mContent.visibility = View.GONE
+//                Handler().postDelayed({
+//                    typingView.visibility = View.GONE
+//                    mContent.visibility = View.VISIBLE
+//                    mContent.text = message.content
+//                }, 2000)
+//            } else {
+//                mContent.text = message.content
+//            }
+//        } else {
+//            mContent.text = message.content
+//        }
     }
 }

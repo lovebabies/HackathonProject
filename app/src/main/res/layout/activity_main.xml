@@ -14,18 +14,55 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorBase"
             android:id="@+id/actionBar"
-            />
+            app:layout_constraintHorizontal_bias="0.0"
+            >
+
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginStart="8dp"
+                android:id="@+id/imgArrowBack"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/imgArrowBack"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:text="Flink"
+                android:textColor="@color/colorWhite"
+                />
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_info"
+                android:layout_marginEnd="8dp"
+                />
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
             android:paddingTop="10dp"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/messageRecyclerView"
+            android:background="@color/colorWhite"
             app:layout_constraintTop_toBottomOf="@id/actionBar"
             app:layout_constraintBottom_toTopOf="@id/sendLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
             />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,34 +72,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/sendLayout"
+            android:background="@color/colorLightGray"
             >
-        <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/mic"
-                android:id="@+id/microphone"
-                />
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                app:layout_constraintStart_toEndOf="@id/microphone"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/btnSend"
                 android:id="@+id/edtUserInput"
+                android:background="@drawable/bg_input_edt"
+                android:padding="8dp"
                 />
+
         <ImageView
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:padding="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/bg_btn_send"
-                android:src="@drawable/send"
+                android:src="@drawable/ic_action_name"
                 android:id="@+id/btnSend"
                 />
     </androidx.constraintlayout.widget.ConstraintLayout>

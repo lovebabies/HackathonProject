@@ -5,8 +5,8 @@ import android.content.SharedPreferences
 import java.lang.UnsupportedOperationException
 
 class PreferencesUtil(private val context: Context) {
-    private var mPref = context.getSharedPreferences("Preferences", Context.MODE_PRIVATE)
-
+    var mPref = context.getSharedPreferences("Preferences", Context.MODE_PRIVATE)
+        
     var token: String?
         get() = mPref["token"]
         set(value) {
