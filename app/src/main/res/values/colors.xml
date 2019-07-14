@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">@color/colorAccent</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorLightGray">#D3D3D3</color>
     <color name="colorText">#181818</color>
@@ -9,4 +9,6 @@
     <color name="colorWhite">#fff</color>
     <color name="colorBase">#cf2a27</color>
     <color name="colorDimGray">#696969</color>
+    <color name="colorDoggerBlue">#1E90FF</color>
+    <color name="colorGreen">#008000</color>
 </resources>

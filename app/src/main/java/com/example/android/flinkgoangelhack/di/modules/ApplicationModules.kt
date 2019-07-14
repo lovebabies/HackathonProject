@@ -40,7 +40,7 @@ class ApplicationModules(private val mContext: Context) {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-                .baseUrl("http://34.87.30.67:8080")
+                .baseUrl("http://34.87.35.158:5005")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)

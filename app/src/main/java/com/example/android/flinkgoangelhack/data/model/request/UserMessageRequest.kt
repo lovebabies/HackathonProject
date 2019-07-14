@@ -2,4 +2,5 @@ package com.example.android.flinkgoangelhack.data.model.request
 
 import com.google.gson.annotations.SerializedName
 
-data class UserMessageRequest(@SerializedName("message") val message: String)
+data class UserMessageRequest(@SerializedName("message") val message: String,
+                              @SerializedName("sender") val sender: String = "you4")

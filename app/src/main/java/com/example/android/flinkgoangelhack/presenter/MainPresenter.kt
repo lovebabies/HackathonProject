@@ -23,17 +23,17 @@ class MainPresenter @Inject constructor(val apiService: ApiService, val mPref: P
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                view?.onMessageResponse(it.responseData!!)
+                view?.onMessageResponse(it)
             },
                 {
                     Log.e(TAG, " error is $it")
                 })
     }
 
-    fun chatFake(userMessageRequest: UserMessageRequest){
+    /*fun chatFake(userMessageRequest: UserMessageRequest){
         val info = FakeResponse.handleFakeRequest(userMessageRequest)
         view?.onMessageResponse(info)
-    }
+    }*/
 
     @SuppressLint("CheckResult")
     fun login(loginRequest: LoginRequest) {

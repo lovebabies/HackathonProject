@@ -4,7 +4,7 @@ import com.example.android.flinkgoangelhack.base.BaseView
 import com.example.android.flinkgoangelhack.data.model.response.BotResponseInfo
 
 interface MainView: BaseView {
-    fun onMessageResponse(botResponseInfo: BotResponseInfo)
+    fun onMessageResponse(botResponseInfoList: ArrayList<BotResponseInfo>?)
     fun onLoginSuccess()
     fun onLoginFailed()
 }

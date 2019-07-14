@@ -2,7 +2,6 @@ package com.example.android.flinkgoangelhack.data
 
 import com.example.android.flinkgoangelhack.data.model.request.LoginRequest
 import com.example.android.flinkgoangelhack.data.model.request.UserMessageRequest
-import com.example.android.flinkgoangelhack.data.model.response.BotResponse
 import com.example.android.flinkgoangelhack.data.model.response.BotResponseInfo
 import com.example.android.flinkgoangelhack.data.model.response.LoginResponse
 import com.example.android.flinkgoangelhack.util.Api.CHAT
@@ -16,5 +15,5 @@ interface ApiService {
     fun login(@Body loginRequest: LoginRequest): Observable<LoginResponse>
 
     @POST(CHAT)
-    fun chat(@Body userMessageRequest: UserMessageRequest): Observable<BotResponse>
+    fun chat(@Body userMessageRequest: UserMessageRequest): Observable<ArrayList<BotResponseInfo>?>
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+                android:background="@drawable/bg_register_success_dialog"
+        >
+
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_tick"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreen"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:text="ACCOUNT CREATED"
+            android:textStyle="bold"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:text="Now you can use this app"
+            android:textStyle="bold"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="OK"
+            android:id="@+id/confirmBtn"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            />
+
+
+</LinearLayout>

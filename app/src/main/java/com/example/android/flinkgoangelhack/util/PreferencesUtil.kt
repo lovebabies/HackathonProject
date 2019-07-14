@@ -2,6 +2,8 @@ package com.example.android.flinkgoangelhack.util
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.android.flinkgoangelhack.util.AuthenticationStatus.DONE_REGISTER
+import com.example.android.flinkgoangelhack.util.AuthenticationStatus.NOT_YET
 import java.lang.UnsupportedOperationException
 
 class PreferencesUtil(private val context: Context) {
@@ -23,6 +25,36 @@ class PreferencesUtil(private val context: Context) {
         get() = mPref["userName"]
         set(value) {
             mPref["userName"] = value
+        }
+
+    var name: String?
+        get() = mPref["name"]
+        set(value) {
+            mPref["name"] = value
+        }
+
+    var address: String?
+        get() = mPref["address"]
+        set(value) {
+            mPref["address"] = value
+        }
+
+    var gender: Int?
+        get() = mPref["gender"]
+        set(value) {
+            mPref["gender"] = value
+        }
+
+    var age: Int?
+        get() = mPref["age"]
+        set(value) {
+            mPref["age"] = value
+        }
+
+    var dataStatus: Int?
+        get() = mPref["data_status"] ?: DONE_REGISTER
+        set(value) {
+            mPref["data_status"] = value
         }
 
     inline fun SharedPreferences.edit(operation: (SharedPreferences.Editor) -> Unit) {
